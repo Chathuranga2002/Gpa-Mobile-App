@@ -9,7 +9,7 @@ const MyCourses = () => {
   return (
     <ScrollView>
         <Text className="text-2xl font-bold text-center mt-6 text-black">
-            MY COURSES
+
         </Text>
         <WelcomeNote/>
         <CourseView/>

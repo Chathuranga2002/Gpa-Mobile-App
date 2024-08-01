@@ -1,13 +1,21 @@
-import {View, Text, TouchableOpacity} from 'react-native'
+import {View, Text, TouchableOpacity, ScrollView} from 'react-native'
 import Header from "@/layouts/header";
 import useDrawer from "@/context/context-hooks/useDrawer";
 import {Entypo, MaterialCommunityIcons} from "@expo/vector-icons";
 import SemestersDetails from '@/components/semesters/semestersDetails';
+import {useLocalSearchParams} from "expo-router";
+import SemesterInfo from "@/components/semesters/semesterInfo";
+import ButtomSpace from "@/components/buttomSpace";
+import SemButton from "@/components/semesters/semButton";
 
 
 const Semesters = () => {
     const {drawer} =  useDrawer();
-  return (
+    const params =useLocalSearchParams()
+    console.log(params)
+
+  // @ts-ignore
+    return (
     <View>
       <Header
           Left={
@@ -16,17 +24,36 @@ const Semesters = () => {
             </TouchableOpacity>
           }
           Center={<Text className={"text-2xl font-semibold"}>SEMESTERS</Text>}
-          Right={
-            <TouchableOpacity>
-              <MaterialCommunityIcons
-                name="dots-grid"
-                size={30}
-                color="black"
-              />
-            </TouchableOpacity>
-          }
+          // Right={
+          //   <TouchableOpacity>
+          //     <MaterialCommunityIcons
+          //       name="dots-grid"
+          //       size={30}
+          //       color="black"
+          //     />
+          //   </TouchableOpacity>
+          // }
         />
-        <SemestersDetails/>
+      <ScrollView>
+          <SemestersDetails
+              name={params.name}
+              id={params.id}
+          />
+          <SemesterInfo/>
+          <SemesterInfo/>
+          <SemesterInfo/>
+          <SemesterInfo/>
+          <SemesterInfo/>
+          <SemesterInfo/>
+          <SemesterInfo/>
+          <SemesterInfo/>
+          <SemesterInfo/>
+          <SemesterInfo/>
+          <SemesterInfo/>
+          <SemesterInfo/>
+          <SemButton/>
+          <ButtomSpace/>
+      </ScrollView>
     </View>
   )
 }

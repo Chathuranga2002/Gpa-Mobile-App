@@ -27,7 +27,7 @@ const CourseView = () => {
         <TouchableOpacity className="bg-purple-700 py-2 pl-6 pr-6 px-4 rounded-lg "  onPress={() => setDeleteModalVisible(true)}>
           <MaterialCommunityIcons name="delete-sweep" size={24} color="white" />
         </TouchableOpacity>
-        <TouchableOpacity className="bg-purple-700 py-2 px-4 rounded-lg" onPress={()=>router.navigate('/semesters')}>
+        <TouchableOpacity className="bg-purple-700 py-2 px-4 rounded-lg" onPress={()=>router.navigate({pathname:'/semesters',params:{id:"1",name:"ijse GDSe KK"}})}>
           <Text className="text-white text-center">Semesters</Text>
         </TouchableOpacity>
       </View>
