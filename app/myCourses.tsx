@@ -12,12 +12,11 @@ const MyCourses = () => {
 
         </Text>
         <WelcomeNote/>
-        <CourseView/>
-        <CourseView/>
-        <CourseView/>
-        <CourseView/>
-        <CourseView/>
-        <CourseView/>
+
+        <CourseView name={"gdse"} credit={7} gpa={2.333}/>
+        <CourseView name={"ijse"} credit={7} gpa={2.333}/>
+        <CourseView name={"ab"} credit={7} gpa={2.333}/>
+        <CourseView name={"abc"} credit={7} gpa={2.333}/>
         <AddButton buttonText={"add"}/>
         <ButtomSpace/>
 

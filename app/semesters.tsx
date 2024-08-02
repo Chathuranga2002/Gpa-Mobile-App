@@ -51,7 +51,7 @@ const Semesters = () => {
           <SemesterInfo/>
           <SemesterInfo/>
           <SemesterInfo/>
-          <SemButton/>
+          <SemButton name={"Add Semester"}/>
           <ButtomSpace/>
       </ScrollView>
     </View>

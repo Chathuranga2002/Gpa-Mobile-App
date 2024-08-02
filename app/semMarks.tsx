@@ -5,6 +5,8 @@ import useDrawer from "@/context/context-hooks/useDrawer";
 import ResaltTable from "@/components/semesters/resaltTable";
 import {useState} from "react";
 import ButtomSpace from "@/components/buttomSpace";
+import SemButton from "@/components/semesters/semButton";
+import ResultsButton from "@/components/resultsButton";
 
 const semMarks = () => {
     const {drawer} =  useDrawer();
@@ -84,7 +86,7 @@ const semMarks = () => {
 
             {/*  table*/}
 
-
+            <ResultsButton name={"Add Results"}/>
             <ResaltTable subjects={subjects}
                          onEdit={handleEdit}
                          onDelete={handleDelete}
